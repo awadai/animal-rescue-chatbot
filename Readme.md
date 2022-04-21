@@ -59,11 +59,19 @@ rasa visualize
 
 ## Using the Chatbot
 
-Once training is complete, you launch and chat with the bot by running:
+Once training is complete, you launch and chat with the bot. First run the following command in the terminal:
+
+```
+rasa run actions
+```
+
+Then keep the terminal open and in another terminal run:
 
 ```
 rasa shell
 ```
+
+The first terminal launches an action server that the main chatbot terminal uses to execute custom actions.
 
 You can also run the NLU unit without the dialogue component. This will show the intent classification along with the confidence for all classes and the extracted entities if any. This allows for an inspection of how well the NLU is able to interpret the user's utterances.
 
