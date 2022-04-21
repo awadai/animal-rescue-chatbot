@@ -25,6 +25,11 @@ slots:
     - type: from_entity
       entity: animal
 
+forms:
+  animal_form:
+    required_slots:
+    - animal
+
 
 responses:
   utter_greet:
@@ -47,6 +52,9 @@ responses:
 
   utter_need_help:
   - text: "Should I call for professional help and share your location?"
+
+  utter_ask_animal:
+  - text: "What kind of animal are you dealing with? Is it a cat, dog or bird?"
 
   utter_please_rephrase:
   - text: "I didn't quite get that. Can you please rephrase?"
