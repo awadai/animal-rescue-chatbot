@@ -4,9 +4,6 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
-
-# This is a simple example for a custom action which utters "Hello World!"
-
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
@@ -28,6 +25,7 @@ class ActionCallHelp(Action):
 
         return []
 
+
 class ActionFoodInstructions(Action):
 
     def name(self) -> Text:
@@ -44,20 +42,14 @@ class ActionFoodInstructions(Action):
         }
         
         animal_type = tracker.get_slot('animal')
-        if not animal_type:
-            msg = 'What kind of animal are you dealing with?'
-        else:
-            if 'cat' in animal_type:
-                animal_type = 'cat'
-            elif 'dog' in animal_type:
-                animal_type = 'dog'
-            elif 'bird' in animal_type:
-                animal_type = 'bird'
-            else:
-                dispatcher.utter_message(text="I don't recognize this animal. Can you tell me if it's a cat, dog or bird?")
-                return []
-            msg = food_care[animal_type]
 
-        dispatcher.utter_message(text=msg)
+        if 'cat' in animal_type:
+            animal_type = 'cat'
+        elif 'dog' in animal_type:
+            animal_type = 'dog'
+        elif 'bird' in animal_type:
+            animal_type = 'bird'
+
+        dispatcher.utter_message(text=food_care[animal_type])
 
         return []
