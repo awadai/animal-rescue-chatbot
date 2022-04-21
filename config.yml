@@ -12,11 +12,9 @@ pipeline:
 - name: SpacyNLP
   model: "en_core_web_md"
 - name: SpacyTokenizer
-- name: LanguageModelFeaturizer
-  model_name: "bert"
-  model_weights: "rasa/LaBSE"
-- name: DIETClassifier
-  epochs: 100
+- name: SpacyFeaturizer
+- name: SklearnIntentClassifier
+- name: CRFEntityExtractor
 - name: FallbackClassifier
   threshold: 0.3
   ambiguity_threshold: 0.1
