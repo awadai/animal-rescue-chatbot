@@ -1,0 +1,90 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good bye
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - sure
+    - please
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+    - what can you do?
+
+- intent: animal_stray
+  examples: |
+    - I found a stray [dog](animal)
+    - I found a [bird](animal) on the street
+    - there is a [cat](animal) stuck on a tree
+    - a [bird](animal) fell on my balcony
+    - there is a lost [dog](animal) in my backyard
+    - I found a [cat](animal) on the street
+
+- intent: animal_hungry
+  examples: |
+    - what do [dogs](animal) eat?
+    - is it safe to give [cats](animal) milk?
+    - the [bird](animal) is hungry
+    - the [dog](animal) needs food
+    - the [cat](animal) must be starving
+    - do [dogs](animal) east chicken?
+    - can I feed the [bird](animal) fruit?
+    - what to feed [cats](animal)?
+
+- intent: animal_injured
+  examples: |
+    - the [bird](animal) can not fly
+    - my [dog](animal) can not walk
+    - the [cat](animal) is bleeding
+    - the [dog](animal) is in pain
+    - the [cat](animal) will not wake up
+    - my [bird](animal) needs help
+    - the [cat](animal) is breathing heavily
+    - I need help with my [bird](animal)
+    - my [bird](animal) has an infection
