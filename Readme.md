@@ -45,7 +45,13 @@ In order to train the chatbot we need to properly populate the following files:
 - rules.yml: contains actions that the chatbot must always follow when presented with a certain scenario. This requires a RulePolicy components in the dialogue manager.
 - actions.py: Python code implementing custom actions that can be done by the chatbot.
 
-Once the files are properly populated, the chatbot can be trained by running:
+Once the files are properly populated, you can verify their integrity by running:
+
+```
+rasa data validate
+```
+
+Then the bot can be trained using:
 
 ```
 rasa train
