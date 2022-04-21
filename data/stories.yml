@@ -1,0 +1,68 @@
+version: "3.1"
+
+stories:
+
+- story: stray path good
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: animal_stray
+  - action: utter_straycare
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_glad_to_help
+
+
+- story: stray path bad
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: animal_stray
+  - action: utter_straycare
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_greet
+
+
+- story: hungry path good
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: animal_hungry
+  - action: action_food_instructions
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_glad_to_help
+
+
+- story: hungry path bad
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: animal_hungry
+  - action: action_food_instructions
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_greet
+
+
+- story: injury path good
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: animal_injured
+  - action: utter_straycare
+  - action: utter_need_help
+  - intent: affirm
+  - action: action_call_help
+
+
+- story: injury path bad
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: animal_injured
+  - action: utter_straycare
+  - action: utter_need_help
+  - intent: deny
+  - action: utter_greet
