@@ -1,0 +1,62 @@
+version: "3.1"
+
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - animal_stray
+  - animal_hungry
+  - animal_injured
+  - nlu_fallback
+
+
+entities:
+- animal
+
+
+slots:
+  animal:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: animal
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I help?"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_glad_to_help:
+  - text: "Glad I could help!"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa.\nI can help you take care of stray or injured animals."
+
+  utter_straycare:
+  - text: "Make sure you approach the stray animal with caution.\nKeep it away from children and other animals.\nProvide the animal with some water and food."
+
+  utter_need_help:
+  - text: "Should I call for professional help and share your location?"
+
+  utter_please_rephrase:
+  - text: "I didn't quite get that. Can you please rephrase?"
+
+
+actions:
+- action_call_help
+- action_food_instructions
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
