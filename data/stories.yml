@@ -29,6 +29,8 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: animal_hungry
+  - action: animal_form
+  - active_loop: animal_form
   - action: action_food_instructions
   - action: utter_did_that_help
   - intent: affirm
@@ -40,6 +42,8 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: animal_hungry
+  - action: animal_form
+  - active_loop: animal_form
   - action: action_food_instructions
   - action: utter_did_that_help
   - intent: deny
