@@ -73,7 +73,7 @@ rasa shell
 
 The first terminal launches an action server that the main chatbot terminal uses to execute custom actions.
 
-You can also run the NLU unit without the dialogue component. This will show the intent classification along with the confidence for all classes and the extracted entities if any. This allows for an inspection of how well the NLU is able to interpret the user's utterances.
+You can also run the NLU unit without the dialogue component. This will show the intent classification along with the confidence for all classes and the extracted entities if any. This allows for an inspection of how well the NLU is able to interpret the user's utterances. The actions terminal is not needed for this case.
 
 ```
 rasa shell nlu
